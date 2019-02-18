@@ -1,0 +1,59 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	
+	
+	const int ROWS = 5;
+	const int COLS = 5;
+	int arr[ROWS][COLS], rowsum = 0, colsum{};
+
+	for (int i = 0; i < ROWS; i++)
+	{
+		
+
+		for (int j = 0; j < COLS; j++)
+		{
+			
+			cout << i << " Cols: " << " Rows: " << j << ": ";
+			cin >> arr[i][j];
+
+		}
+	}
+
+	system("cls");
+
+	for (int i = 0; i < ROWS; i++)
+	{   
+
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] <<"\t";
+		}
+		cout << endl;
+	}
+
+	cout << "\n";
+
+	
+	for (int i = 0; i < COLS; i++)
+		
+	{
+		for (int j = 0; j < COLS; j++) colsum += arr[i][j];
+		cout  << i + 1 << " Cols: " << colsum << "\n" ;
+		colsum = 0;
+		
+	}
+	cout << "\n";
+	for (int j = 0; j < COLS; j++)
+	{
+		for (int i = 0; i < COLS; i++) rowsum += arr[i][j];
+		cout << j + 1 << " Rows: " << rowsum << "\n";
+		rowsum = 0;
+
+	}
+	
+}
